@@ -14,8 +14,8 @@
             prefWidth="1000.0" prefHeight="800.0">
     <BorderPane stylesheets="@/css/main.css">
         <top>
-            <HBox prefWidth="1000" prefHeight="30" style="-fx-background-color: #2D2D2D">
-                <MenuBar style="-fx-background-color: #2D2D2D">
+            <HBox prefWidth="1000" prefHeight="30">
+                <MenuBar prefWidth="1000" prefHeight="30">
                     <Menu text="服务器">
                         <MenuItem text="新建服务器" onAction="#showNewServerWindows" />
                     </Menu>
@@ -23,9 +23,8 @@
             </HBox>
         </top>
         <left>
-            <VBox prefWidth="200" prefHeight="700"
-                  style="-fx-background-color: #1F1F1F">
-                <HBox style="-fx-background-color: #1F1F1F">
+            <VBox prefWidth="200" prefHeight="700">
+                <HBox>
                     <padding> <Insets left="20" top="20" /> </padding>
                     <TreeView fx:id="redisServerTree" opacity="0.5" >
                     </TreeView>
@@ -33,11 +32,11 @@
             </VBox>
         </left>
         <right>
-            <VBox prefWidth="800" prefHeight="700" style="-fx-background-color: #232323">
+            <VBox prefWidth="800" prefHeight="700">
                 <HBox prefHeight="30">
                     <GridPane hgap="10">
                         <padding> <Insets left="20" top="20" bottom="20"></Insets> </padding>
-                        <Label text="key: " textFill="white" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label text="key: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
                         <TextField fx:id="redisKey" prefWidth="500" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                         <Button text="查询" onAction="#query" GridPane.columnIndex="2" GridPane.rowIndex="0" />
                     </GridPane>
@@ -45,13 +44,12 @@
                 <HBox prefHeight="30">
                     <padding> <Insets left="20" /> </padding>
                     <GridPane hgap="10">
-                        <Label text="value: " textFill="white" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label text="value: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
                     </GridPane>
                 </HBox>
                 <HBox>
                     <padding> <Insets left="20" /> </padding>
-                    <TextArea fx:id="redisValue" prefHeight="700" prefWidth="760"
-                               style="-fx-background-color: #272822" />
+                    <TextArea fx:id="redisValue" prefHeight="700" prefWidth="760" />
                 </HBox>
             </VBox>
         </right>

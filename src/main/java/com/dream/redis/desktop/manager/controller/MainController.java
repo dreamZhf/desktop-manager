@@ -177,6 +177,7 @@ public class MainController implements Initializable {
         dummyRoot.getChildren().add(new TreeItem<>(serverDTO.getName()));
         Server server = new RedisServer(serverDTO);
         GlobalCache.cacheServer(server);
+        redisServerManagerService.saveRedisServer(serverDTO);
     }
 
     @Autowired

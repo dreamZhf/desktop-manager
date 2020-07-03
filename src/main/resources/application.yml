@@ -1,3 +1,9 @@
 spring:
   main:
     web-application-type: none
+  datasource:
+    type: org.sqlite.SQLiteDataSource
+    url: jdbc:sqlite:mydb.sqlite3
+mybatis:
+  type-aliases-package: com.dream.redis.desktop.manager.entity
+  mapper-locations: classpath:mapper/*.xml

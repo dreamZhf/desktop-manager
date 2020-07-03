@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dream.redis.desktop.manager.mapper.RedisServerManagerMapper">
+
+    <insert id="save">
+        INSERT INTO redis_server(
+            `name`,
+            `host`,
+            `port`,
+            `username`,
+            `password`
+        ) VALUES(
+            #{name},
+            #{host},
+            #{port},
+            #{username},
+            #{password}
+        )
+    </insert>
+
+    <select id="findAllRedisServer" resultType="com.dream.redis.desktop.manager.entity.RedisServerEntity">
+        SELECT
+            r.`id`,
+            r.`name`,
+            r.`host`,
+            r.`port`,
+            r.`username`,
+            r.`password`
+        FROM
+            `redis_server` r
+        ORDER BY r.`id` ASC
+    </select>
+</mapper>

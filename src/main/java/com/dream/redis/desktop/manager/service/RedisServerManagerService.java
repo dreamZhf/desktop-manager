@@ -1,5 +1,7 @@
 package com.dream.redis.desktop.manager.service;
 
+import com.dream.redis.desktop.manager.dto.ServerDTO;
+
 /**
  * @author dream
  * @version v1.0.0
@@ -12,4 +14,10 @@ public interface RedisServerManagerService {
      * 加载 redis 服务器列表
      */
     void loadRedisServerList();
+
+    /**
+     * 保存 redis 服务器
+     * @param serverDTO
+     */
+    void saveRedisServer(ServerDTO serverDTO);
 }
